@@ -1,0 +1,44 @@
+<!-- HTML Form Validation using JavaScript events -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+    <script>
+        function validateForm() {
+            let name = document.getElementById("name").value;
+
+            if (name === "") {
+                alert("Name cannot be empty!");
+                return false;
+            }
+
+            alert("Form Submitted Successfully!");
+            return true;
+        }
+
+        function checkInput() {
+            let name = document.getElementById("name").value;
+            if (name.length < 3) {
+                document.getElementById("msg").innerText = "Minimum 3 characters required";
+            } else {
+                document.getElementById("msg").innerText = "";
+            }
+        }
+    </script>
+</head>
+<body>
+
+<h2>Form Validation</h2>
+
+<form onsubmit="return validateForm()">
+    Name:
+    <input type="text" id="name" oninput="checkInput()">
+    <span id="msg" style="color:red;"></span>
+    <br><br>
+
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!-- User-defined functions & var, let, const scope -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Functions and Scope</title>
+</head>
+<body>
+
+<h2>Functions and Variable Scope</h2>
+
+<button onclick="show()">Click Me</button>
+
+<script>
+function show() {
+
+    var a = 10;      // function scope
+    let b = 20;      // block scope
+    const c = 30;    // constant
+
+    document.write("var a = " + a + "<br>");
+    document.write("let b = " + b + "<br>");
+    document.write("const c = " + c + "<br>");
+}
+
+/* User-defined function */
+function add(x, y) {
+    return x + y;
+}
+
+document.write("<br>Sum using function: " + add(5, 3));
+</script>
+
+</body>
+</html>

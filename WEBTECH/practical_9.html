@@ -1,0 +1,42 @@
+<!-- Responsive Web Page using Media Queries (Mobile-First) -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Design</title>
+    <style>
+        body {
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        .container {
+            padding: 1rem;
+            background-color: lightgray;
+        }
+
+       
+        @media (min-width: 600px) {
+            .container {
+                background-color: lightblue;
+                font-size: 1.2rem;
+            }
+        }
+
+        
+        @media (min-width: 900px) {
+            .container {
+                background-color: lightgreen;
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        This page is responsive using media queries
+    </div>
+
+</body>
+</html>
